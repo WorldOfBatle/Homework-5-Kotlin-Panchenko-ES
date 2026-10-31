@@ -4,20 +4,16 @@ class Box<T, U, V>(
     val third: V
 ) {
     fun sumNumbers(): Double {
-        var sum = 0.0
+        return toNumber(first) + toNumber(second) + toNumber(third)
+    }
 
-        if (first is Number) {
-            sum += first.toDouble()
+    private fun toNumber(value: Any?): Double {
+        return when (value) {
+            is Number -> value.toDouble()
+            is String -> value.trim()
+                .replace(',', '.')
+                .toDoubleOrNull() ?: 0.0
+            else -> 0.0
         }
-
-        if (second is Number) {
-            sum += second.toDouble()
-        }
-
-        if (third is Number) {
-            sum += third.toDouble()
-        }
-
-        return sum
     }
 }

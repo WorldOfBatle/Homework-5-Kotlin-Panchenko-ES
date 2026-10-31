@@ -3,7 +3,7 @@ fun main() {
     println()
 
     val firstBox = Box<String, Int, Float>(
-        first = "Первая коробка",
+        first = "10",
         second = 10,
         third = 1.5f
     )
@@ -11,7 +11,7 @@ fun main() {
     val secondBox = Box<Int, Float, String>(
         first = 20,
         second = 2.5f,
-        third = "Вторая коробка"
+        third = "2,5"
     )
 
     val thirdBox = Box<Float, String, Int>(
