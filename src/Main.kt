@@ -23,4 +23,17 @@ fun main() {
     println("Коробка 1: ${firstBox.first}, ${firstBox.second}, ${firstBox.third}")
     println("Коробка 2: ${secondBox.first}, ${secondBox.second}, ${secondBox.third}")
     println("Коробка 3: ${thirdBox.first}, ${thirdBox.second}, ${thirdBox.third}")
+    println()
+
+    val firstSum = firstBox.sumNumbers()
+    val secondSum = secondBox.sumNumbers()
+    val thirdSum = thirdBox.sumNumbers()
+
+    println("Сумма чисел в первой коробке: $firstSum")
+    println("Сумма чисел во второй коробке: $secondSum")
+    println("Сумма чисел в третьей коробке: $thirdSum")
+
+    val totalSum = firstSum + secondSum + thirdSum
+
+    println("Общая сумма чисел: $totalSum")
 }
